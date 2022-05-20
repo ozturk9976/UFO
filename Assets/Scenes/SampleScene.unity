@@ -1242,7 +1242,7 @@ PrefabInstance:
       objectReference: {fileID: 1516607437313868473, guid: c2cb69b0b85052547ba14a83fe7e9825, type: 3}
     - target: {fileID: 6803543681003139679, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: m_Name
-      value: UFO2
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6803543681003139621, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}

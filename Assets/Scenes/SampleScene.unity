@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 0}
   spawnRadius: 7
-  time: 1.5
+  time: 1
   enemies:
   - {fileID: 1020604886630553622, guid: 0917ab4f3e0456e499f9c1162e8e4e7e, type: 3}
   - {fileID: 1020604886630553622, guid: 54ba4adfe3e56df4589f6ca20ab3c781, type: 3}

@@ -403,7 +403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1152, y: 0.000061035156}
+  m_AnchoredPosition: {x: -1152, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &177801577
@@ -462,6 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimerText: {fileID: 177801577}
   playing: 1
+  Timer: 0
 --- !u!1 &308425102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,15 +1051,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6803543681003139619, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6803543681003139619, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6803543681003139619, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6803543681003139619, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1397,7 +1398,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 73856a99828c3714aa2ac2d111c38e11, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.421
+  m_Volume: 0.188
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1607,7 +1608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386dc229a87e9d143a801ebe24435853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
   spawnRadius: 7
   time: 1
   enemies:

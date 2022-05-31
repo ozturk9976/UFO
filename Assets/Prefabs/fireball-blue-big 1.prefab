@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1933322180074518189}
   - component: {fileID: -2060845770537495127}
   - component: {fileID: -8232344185529203997}
+  - component: {fileID: -7031519000098837058}
   m_Layer: 0
   m_Name: fireball-blue-big 1
   m_TagString: Bullet
@@ -267,3 +268,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-7031519000098837058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3052043061934572021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ec50c93653e9545b2e1d06c589971e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 1

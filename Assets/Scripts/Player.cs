@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject FireBallScript;
+
     // Start is called before the first frame update
     public float hareketGucu;
     public Animator explosion;

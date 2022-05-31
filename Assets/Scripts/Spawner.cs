@@ -17,9 +17,25 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         //if (UITimer.TimerText.text.minutes == "35") { }
-        if (ScoreCount.scoreValue == 5)
+        if (ScoreCount.scoreValue == 55)
         {
-            time -= 1f;
+            time = 1.1f;
+        }
+        if (ScoreCount.scoreValue == 15)
+        {
+            time = 0.9f;
+        }
+        if (ScoreCount.scoreValue == 35)
+        {
+            time = 0.7f;
+        }
+        if (ScoreCount.scoreValue == 85)
+        {
+            time = 0.5f;
+        }
+        if (ScoreCount.scoreValue == 85)
+        {
+            time = 0.3f;
         }
     }
 

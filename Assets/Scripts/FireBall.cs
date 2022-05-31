@@ -22,7 +22,6 @@ public class FireBall : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
-        
     }
 
     // Update is called once per frame
@@ -50,9 +49,8 @@ public class FireBall : MonoBehaviour
     //     Mermi.GetComponent<Rigidbody2D>().AddForce(transform.up * LaunchForce * Time.deltaTime);
     // }
 
-    void dropFireBallRight()
+    public void dropFireBallRight()
     {
-        
         GameObject Mermi2 = Instantiate(
             Mermi1,
             olusumNoktasi2.transform.position,
@@ -61,7 +59,7 @@ public class FireBall : MonoBehaviour
         Mermi2.GetComponent<Rigidbody2D>().AddForce(transform.right * LaunchForce * Time.deltaTime);
     }
 
-    void dropFireBallLeft()
+    public void dropFireBallLeft()
     {
         GameObject Mermi3 = Instantiate(
             Mermi1,
@@ -82,5 +80,4 @@ public class FireBall : MonoBehaviour
     //     );
     //     Mermi4.GetComponent<Rigidbody2D>().AddForce(-transform.up * LaunchForce * Time.deltaTime);
     // },
-
 }

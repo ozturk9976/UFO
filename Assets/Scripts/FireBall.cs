@@ -15,13 +15,14 @@ public class FireBall : MonoBehaviour
 
     private AudioSource source;
 
-    public float LaunchForce = 10;
+    public float LaunchForce = 25f;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -51,6 +52,7 @@ public class FireBall : MonoBehaviour
 
     void dropFireBallRight()
     {
+        
         GameObject Mermi2 = Instantiate(
             Mermi1,
             olusumNoktasi2.transform.position,

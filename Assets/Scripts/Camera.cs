@@ -19,5 +19,6 @@ public class Camera : MonoBehaviour
             followTransform.position.z - 10
         );
         // transform.Rotate(0, 0, 0.1f); //transform.position.z);
+        
     }
 }

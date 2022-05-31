@@ -5,15 +5,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8230494695230566140, guid: b129eff8336ebeb4e9b28b22ff4ebcb7, type: 3}
       propertyPath: m_Name
-      value: ParticleExplosionsMALL
+      value: ParticleExplosionsMALL Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8230494695230566142, guid: b129eff8336ebeb4e9b28b22ff4ebcb7, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8230494695230566143, guid: b129eff8336ebeb4e9b28b22ff4ebcb7, type: 3}
       propertyPath: m_RootOrder
@@ -72,4 +73,5 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b129eff8336ebeb4e9b28b22ff4ebcb7, type: 3}

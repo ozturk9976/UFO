@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public UITimer timer;
-
     [SerializeField]
     private float spawnRadius = 7,
         time = 1.5f;
@@ -19,6 +17,10 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         //if (UITimer.TimerText.text.minutes == "35") { }
+        if (ScoreCount.scoreValue == 5)
+        {
+            time -= 1f;
+        }
     }
 
     IEnumerator SpawnAnEnemy()

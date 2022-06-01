@@ -2188,7 +2188,7 @@ GameObject:
   - component: {fileID: 324267384}
   m_Layer: 0
   m_Name: Border2
-  m_TagString: Border
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3323,7 +3323,7 @@ GameObject:
   - component: {fileID: 452529175}
   m_Layer: 0
   m_Name: Border3
-  m_TagString: Border
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4942,7 +4942,7 @@ GameObject:
   - component: {fileID: 651472685}
   m_Layer: 0
   m_Name: Border1
-  m_TagString: Border
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6602,7 +6602,7 @@ PrefabInstance:
       objectReference: {fileID: 5834612367683345369, guid: 2790c363dcd10da4aaff71180fb43d65, type: 3}
     - target: {fileID: 6803543681003139677, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: hareketGucu
-      value: 65
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 6803543681003139678, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: anim
@@ -6622,7 +6622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6803543681003139678, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: LaunchForce
-      value: 24
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6803543681003139678, guid: e07cc3b2757383244b6178314d5d34d2, type: 3}
       propertyPath: patlamaPrefab1
@@ -10749,7 +10749,7 @@ GameObject:
   - component: {fileID: 1605723331}
   m_Layer: 0
   m_Name: Border4
-  m_TagString: Border
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

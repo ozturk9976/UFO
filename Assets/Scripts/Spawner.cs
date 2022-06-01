@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField]
-    private float spawnRadius = 5,
+    public float spawnRadius = 6.1f,
         time = 1.5f;
     public GameObject[] enemies;
 
@@ -17,23 +16,39 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         //if (UITimer.TimerText.text.minutes == "35") { }
-        if (ScoreCount.scoreValue == 55)
+        if (ScoreCount.scoreValue == 15)
         {
             time = 1.1f;
         }
-        if (ScoreCount.scoreValue == 15)
+        if (ScoreCount.scoreValue == 35)
+        {
+            time = 1f;
+        }
+        if (ScoreCount.scoreValue == 55)
         {
             time = 0.9f;
         }
-        if (ScoreCount.scoreValue == 35)
+        if (ScoreCount.scoreValue == 75)
+        {
+            time = 0.8f;
+        }
+        if (ScoreCount.scoreValue == 105)
         {
             time = 0.7f;
         }
-        if (ScoreCount.scoreValue == 85)
+        if (ScoreCount.scoreValue == 135)
+        {
+            time = 0.6f;
+        }
+        if (ScoreCount.scoreValue == 155)
         {
             time = 0.5f;
         }
-        if (ScoreCount.scoreValue == 85)
+        if (ScoreCount.scoreValue == 175)
+        {
+            time = 0.4f;
+        }
+        if (ScoreCount.scoreValue == 200)
         {
             time = 0.3f;
         }

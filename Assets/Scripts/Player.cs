@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag.Equals("Enemy"))
+        if (col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("BORDER"))
         {
             SceneManager.LoadScene("GameOverScene");
             shake.CamShake();

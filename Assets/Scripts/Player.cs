@@ -33,12 +33,13 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("BORDER"))
+        if (col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("Border"))
         {
-            SceneManager.LoadScene("GameOverScene");
             shake.CamShake();
             Destroy(gameObject);
             Instantiate(explosion, transform.position, Quaternion.identity);
+
+            // SceneManager.LoadScene("GameOverScene");
         }
     }
 }

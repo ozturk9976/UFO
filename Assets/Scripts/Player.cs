@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float hareketGucu;
     public Animator explosion;
     private Shake shake;
+    public bool isDead;
 
     Vector2 hareket;
 
@@ -35,12 +36,15 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("Enemy"))
         {
+            isDead = true;
             shake.CamShake();
             Destroy(gameObject);
             Destroy(col.gameObject);
             Instantiate(explosion, transform.position, Quaternion.identity);
-
-            // SceneManager.LoadScene("GameOverScene");
+        }
+        if (isDead == true)
+        {
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

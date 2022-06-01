@@ -8,6 +8,8 @@ public class FireBall : MonoBehaviour
     Rigidbody2D rb;
     public GameObject Mermi1;
 
+    private float nextTimeOfFire = 0;
+
     public Transform olusumNoktasi;
     public Transform olusumNoktasi2;
     public Transform olusumNoktasi3;

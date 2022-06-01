@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public GameObject FireBallScript;
-
     // Start is called before the first frame update
     public float hareketGucu;
     public Animator explosion;
@@ -36,6 +35,7 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("Enemy"))
         {
+            SceneManager.LoadScene("GameOverScene");
             shake.CamShake();
             Destroy(gameObject);
             Instantiate(explosion, transform.position, Quaternion.identity);

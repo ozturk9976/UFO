@@ -10,7 +10,7 @@ public class Weapon : ScriptableObject
     public GameObject bulletPrefab;
     public float fireRate = 1;
 
-    // public int damage = 20;
+    public int damage = 20;
 
     public void Shoot()
     {

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Shake shake;
 
     Vector2 hareket;
+    public Renderer rend;
 
     Rigidbody2D rb;
 
@@ -18,7 +19,18 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
     }
+
+    // IEnumerator waitToPass()
+    // {
+    //     gameObject.SetActive(false);
+    //     yield return new WaitForSeconds(3f);
+    //     SceneManager.LoadScene("GameOverScene");
+
+    //     Destroy(gameObject);
+    // }
 
     void Update()
     {
@@ -35,9 +47,11 @@ public class Player : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("Enemy"))
         {
+            // StartCoroutine(waitToPass());
             shake.CamShake();
-            Destroy(gameObject);
             Instantiate(explosion, transform.position, Quaternion.identity);
+            // rend.enabled = false;
+            Destroy(gameObject);
             SceneManager.LoadScene("GameOverScene");
         }
     }

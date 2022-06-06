@@ -5,32 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float hareketGucu;
     public Animator explosion;
     private Shake shake;
 
+    [SerializeField]
+    public int PlayerHealth = 100;
+    public int currentHealth;
+
     Vector2 hareket;
-    public Renderer rend;
 
     Rigidbody2D rb;
 
     void Start()
     {
+        currentHealth = PlayerHealth;
+        ScoreCount.scoreValue = 0;
         rb = GetComponent<Rigidbody2D>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
-        rend = GetComponent<Renderer>();
-        rend.enabled = true;
     }
-
-    // IEnumerator waitToPass()
-    // {
-    //     gameObject.SetActive(false);
-    //     yield return new WaitForSeconds(3f);
-    //     SceneManager.LoadScene("GameOverScene");
-
-    //     Destroy(gameObject);
-    // }
 
     void Update()
     {
@@ -43,14 +36,25 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + hareket * hareketGucu * Time.fixedDeltaTime);
     }
 
+    void Die()
+    {
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D col)
     {
+        if (col.gameObject.tag.Equals("EnemyBullet"))
+        {
+            currentHealth -= 20;
+            Die();
+        }
         if (col.gameObject.tag.Equals("Enemy"))
         {
-            // StartCoroutine(waitToPass());
             shake.CamShake();
             Instantiate(explosion, transform.position, Quaternion.identity);
-            // rend.enabled = false;
             Destroy(gameObject);
             SceneManager.LoadScene("GameOverScene");
         }

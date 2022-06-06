@@ -14,8 +14,6 @@ public class FireBall : MonoBehaviour
 
     public Transform olusumNoktasi;
     public Transform olusumNoktasi2;
-    public Transform olusumNoktasi3;
-    public Transform olusumNoktasi4;
 
     private AudioSource source;
 
@@ -43,17 +41,11 @@ public class FireBall : MonoBehaviour
             dropFireBallLeft();
             source.Play();
         }
+        if (ScoreCount.scoreValue == 45)
+        {
+            fireRate = 0.3f;
+        }
     }
-
-    // void dropFireBallUp()
-    // {
-    //     GameObject Mermi = Instantiate(
-    //         Mermi1,
-    //         olusumNoktasi.transform.position,
-    //         transform.rotation
-    //     );
-    //     Mermi.GetComponent<Rigidbody2D>().AddForce(transform.up * LaunchForce * Time.deltaTime);
-    // }
 
     public void dropFireBallRight()
     {
@@ -63,44 +55,13 @@ public class FireBall : MonoBehaviour
             transform.rotation
         );
         Mermi2.GetComponent<Rigidbody2D>().AddForce(transform.right * LaunchForce * Time.deltaTime);
-        // for (int i = 0; i < 3; i++)
-        // {
-        //     GameObject Mermi2 = Instantiate(
-        //         Mermi1,
-        //         olusumNoktasi.transform.position,
-        //         transform.rotation
-        //     );
-        //     Mermi2
-        //         .GetComponent<Rigidbody2D>()
-        //         .AddForce(transform.right * LaunchForce * Time.deltaTime);
-        // }
-        ;
-        // Mermi2
-        //     .GetComponent<Rigidbody2D>()
-        //     .AddForce(transform.right * LaunchForce + new Vector3(0f, -90f, 0f) * Time.deltaTime);
-        // GameObject Mermi3 = Instantiate(
-        //     Mermi1,
-        //     olusumNoktasi2.transform.position,
-        //     transform.rotation
-        // );
-        // Mermi2
-        //     .GetComponent<Rigidbody2D>()
-        //     .AddForce(transform.right * LaunchForce + new Vector3(0f, 0f, 0f) * Time.deltaTime);
-        // GameObject Mermi4 = Instantiate(
-        //     Mermi1,
-        //     olusumNoktasi3.transform.position,
-        //     transform.rotation
-        // );
-        // Mermi2
-        //     .GetComponent<Rigidbody2D>()
-        //     .AddForce(transform.right * LaunchForce + new Vector3(0f, 90f, 0f) * Time.deltaTime);
     }
 
     public void dropFireBallLeft()
     {
         GameObject Mermi3 = Instantiate(
             Mermi1,
-            olusumNoktasi3.transform.position,
+            olusumNoktasi2.transform.position,
             transform.rotation
         );
         Mermi3
@@ -108,15 +69,7 @@ public class FireBall : MonoBehaviour
             .AddForce(-transform.right * LaunchForce * Time.deltaTime);
     }
 }
-// void dropFireBallDown()
-// {
-//     GameObject Mermi4 = Instantiate(
-//         Mermi1,
-//         olusumNoktasi4.transform.position,
-//         transform.rotation
-//     );
-//     Mermi4.GetComponent<Rigidbody2D>().AddForce(-transform.up * LaunchForce * Time.deltaTime);
-// }
+
 
 //     //shotgun  for (int i = 0; i < 2; i++)
 //             {

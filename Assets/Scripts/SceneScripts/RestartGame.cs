@@ -13,7 +13,7 @@ public class RestartGame : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame()

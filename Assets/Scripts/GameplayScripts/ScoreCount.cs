@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreCount : MonoBehaviour
 {
@@ -18,5 +19,10 @@ public class ScoreCount : MonoBehaviour
     void Update()
     {
         score.text = "Score:" + scoreValue;
+
+        if (scoreValue == 250)
+        {
+            SceneManager.LoadScene("Level2Canvas");
+        }
     }
 }

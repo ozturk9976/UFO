@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentHealth = PlayerHealth;
-        ScoreCount.scoreValue = 0;
+        ScoreCount.scoreValue = 175;
         rb = GetComponent<Rigidbody2D>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }

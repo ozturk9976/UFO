@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5834612367683345368}
   - component: {fileID: 500803547738075757}
   - component: {fileID: -8128741614300690458}
-  - component: {fileID: -2499738172918384228}
   m_Layer: 0
   m_Name: PixelExplo 1
   m_TagString: Untagged
@@ -120,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ec50c93653e9545b2e1d06c589971e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 0.7
 --- !u!82 &-8128741614300690458
 AudioSource:
   m_ObjectHideFlags: 0
@@ -132,17 +132,17 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eeac7ff7e4ad44587b11429a7e7b8fc1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.68
+  m_Pitch: 0.76
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 55
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.14
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -176,7 +176,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.205
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -216,18 +216,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-2499738172918384228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5834612367683345375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b6b88d425f7234aae309cb9a973743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Delay: 1
-  MaximumStress: 0.6
-  Range: 45

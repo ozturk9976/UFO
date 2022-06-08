@@ -21,15 +21,15 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, 7f);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.CompareTag("Bullet"))
+        if (col.gameObject.tag.Equals("Bullet"))
         {
             Instantiate(projectileDestroyParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(col.gameObject);
         }
-        if (col.CompareTag("Player"))
+        if (col.gameObject.tag.Equals("Player"))
         {
             Instantiate(projectileDestroyParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);

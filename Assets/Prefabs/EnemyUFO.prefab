@@ -33,12 +33,12 @@ Transform:
   m_GameObject: {fileID: 8531686863341233017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6535487, y: -0.39427876, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8531686863801066454}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8531686863341233019
 SpriteRenderer:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e1a09ae1364474e848112bd85ab8a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 15
+  rotateSpeed: 35
 --- !u!114 &-2716400159961811840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,8 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  explosion: {fileID: 0}
+  explosion: {fileID: 5834612367683345369, guid: 2790c363dcd10da4aaff71180fb43d65, type: 3}
   particleExplosion: {fileID: 7635756672280084758, guid: e89f7f2ab241d93488ee382b51ee85bd, type: 3}
+  floatingScore: {fileID: 6903446608494667533, guid: a94fb7a0818b1bc41a47a00ba354d9f8, type: 3}
 --- !u!114 &-6345439366198725709
 MonoBehaviour:
   m_ObjectHideFlags: 0

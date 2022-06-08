@@ -6,9 +6,11 @@ public class Destroy : MonoBehaviour
 {
     [SerializeField]
     Rigidbody2D rb;
+
     public Animator explosion;
     public GameObject particleExplosion;
     private Shake shake;
+    public GameObject floatingScore;
 
     private GameObject Script;
 
@@ -32,6 +34,7 @@ public class Destroy : MonoBehaviour
             ScoreCount.scoreValue += 1;
             Destroy(gameObject);
             Destroy(col.gameObject);
+            Instantiate(floatingScore, transform.position, Quaternion.identity);
             Instantiate(particleExplosion, transform.position, Quaternion.identity);
             Instantiate(explosion, transform.position, Quaternion.identity);
         }

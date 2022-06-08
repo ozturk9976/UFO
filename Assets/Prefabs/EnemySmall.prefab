@@ -174,6 +174,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   explosion: {fileID: 5834612367683345369, guid: 2790c363dcd10da4aaff71180fb43d65, type: 3}
   particleExplosion: {fileID: 7635756672280084758, guid: 88b11cc67c94b52459d7a29c7968eb49, type: 3}
+  floatingScore: {fileID: 6903446608494667533, guid: a94fb7a0818b1bc41a47a00ba354d9f8, type: 3}
 --- !u!114 &1443215631540304821
 MonoBehaviour:
   m_ObjectHideFlags: 0

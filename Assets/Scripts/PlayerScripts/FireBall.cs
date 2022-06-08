@@ -29,46 +29,71 @@ public class FireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.J) && Time.time > nextFire) //GETKEY İLE YAPILINCA BİRSÜRÜ MERMİ SPAWNLAN
+        if (Input.GetKey(KeyCode.E) && Time.time > nextFire) //GETKEY İLE YAPILINCA BİRSÜRÜ MERMİ SPAWNLAN
         {
             nextFire = Time.time + fireRate;
             dropFireBallRight();
             source.Play();
         }
-        if (Input.GetKey(KeyCode.G) && Time.time > nextFire)
+        if (Input.GetKey(KeyCode.Q) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             dropFireBallLeft();
             source.Play();
-        }
-        if (ScoreCount.scoreValue == 45)
-        {
-            fireRate = 0.3f;
+
+            if (ScoreCount.scoreValue == 45)
+            {
+                fireRate = 0.1f;
+            }
         }
     }
 
     public void dropFireBallRight()
     {
-        GameObject Mermi2 = Instantiate(
-            Mermi1,
-            olusumNoktasi.transform.position,
-            transform.rotation
-        );
-        Mermi2.GetComponent<Rigidbody2D>().AddForce(transform.right * LaunchForce * Time.deltaTime);
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject Mermi2 = Instantiate(
+                Mermi1,
+                olusumNoktasi.transform.position,
+                transform.rotation
+            );
+            Mermi2
+                .GetComponent<Rigidbody2D>()
+                .AddForce(transform.right * LaunchForce * Time.deltaTime);
+        }
     }
 
     public void dropFireBallLeft()
     {
-        GameObject Mermi3 = Instantiate(
-            Mermi1,
-            olusumNoktasi2.transform.position,
-            transform.rotation
-        );
-        Mermi3
-            .GetComponent<Rigidbody2D>()
-            .AddForce(-transform.right * LaunchForce * Time.deltaTime);
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject Mermi3 = Instantiate(
+                Mermi1,
+                olusumNoktasi2.transform.position,
+                transform.rotation
+            );
+            Mermi3
+                .GetComponent<Rigidbody2D>()
+                .AddForce(-transform.right * LaunchForce * Time.deltaTime);
+        }
+    }
+
+    public void shotgun()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject Mermi2 = Instantiate(
+                Mermi1,
+                olusumNoktasi.transform.position,
+                transform.rotation
+            );
+            Mermi2
+                .GetComponent<Rigidbody2D>()
+                .AddForce(transform.right * LaunchForce * Time.deltaTime);
+        }
     }
 }
+
 
 
 //     //shotgun  for (int i = 0; i < 2; i++)

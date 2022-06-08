@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     public int PlayerHealth = 100;
     public int currentHealth;
+    public GameObject shield;
+    public Transform PlayerSprite;
 
     Vector2 hareket;
 
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentHealth = PlayerHealth;
-        ScoreCount.scoreValue = 175;
+        ScoreCount.scoreValue = 0;
         rb = GetComponent<Rigidbody2D>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
@@ -45,10 +47,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    // void isThereAShield()
+    // {
+    //     currentHealth += 20;
+    //     Destroy(shield);
+    // }
+
     void OnCollisionEnter2D(Collision2D col)
     {
+        if (col.gameObject.tag.Equals("ShieldIcon"))
+        {
+            // Instantiate(shield, PlayerSprite);
+            // Instantiate(shield, transform.position, Quaternion.identity);
+        }
         if (col.gameObject.tag.Equals("EnemyBullet"))
         {
+            // isThereAShield();
             currentHealth -= 20;
             Die();
         }

@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
             // isThereAShield();
             currentHealth -= 20;
             Die();
+            SceneManager.LoadScene("GameOverScene");
         }
         if (col.gameObject.tag.Equals("Enemy"))
         {

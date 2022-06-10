@@ -18,11 +18,6 @@ public class ScoreCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = "Score:" + scoreValue;
-
-        if (scoreValue == 250)
-        {
-            SceneManager.LoadScene("Level2Canvas");
-        }
+      
     }
 }

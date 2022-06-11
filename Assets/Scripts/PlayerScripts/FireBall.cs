@@ -10,8 +10,6 @@ public class FireBall : MonoBehaviour
     private float nextFire = 0.0F;
     public GameObject Mermi1;
 
-    private float nextTimeOfFire = 0;
-
     public Transform olusumNoktasi;
     public Transform olusumNoktasi2;
 
@@ -19,7 +17,6 @@ public class FireBall : MonoBehaviour
 
     public float LaunchForce = 25f;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,7 +47,7 @@ public class FireBall : MonoBehaviour
 
     public void dropFireBallRight()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 15; i++)
         {
             GameObject Mermi2 = Instantiate(
                 Mermi1,
@@ -65,7 +62,7 @@ public class FireBall : MonoBehaviour
 
     public void dropFireBallLeft()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 15; i++)
         {
             GameObject Mermi3 = Instantiate(
                 Mermi1,
@@ -80,7 +77,7 @@ public class FireBall : MonoBehaviour
 
     public void shotgun()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
             GameObject Mermi2 = Instantiate(
                 Mermi1,

@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
         {
             // isThereAShield();
             currentHealth -= 20;
-            Die();
+
             SceneManager.LoadScene("GameOverScene");
         }
         if (col.gameObject.tag.Equals("Enemy"))
@@ -73,6 +73,10 @@ public class Player : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
             SceneManager.LoadScene("GameOverScene");
+        }
+        if (currentHealth == 0)
+        {
+            Die();
         }
     }
 }

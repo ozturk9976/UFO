@@ -8,6 +8,7 @@ public class EnemyFiresAtYou : MonoBehaviour
     public float fireRate;
     float nextFire;
     public Transform olusumNoktasi;
+    public Transform olusumNoktasi2;
     public float BulletSpeed = 15;
 
     public Player target;
@@ -33,6 +34,14 @@ public class EnemyFiresAtYou : MonoBehaviour
         if (Time.time > nextFire) // eğer şu anki zaman nextfire değerinden fazla ise true.
         {
             Instantiate(bullet, olusumNoktasi.transform.position, Quaternion.identity);
+
+            nextFire = Time.time + fireRate;
+            bullet
+                .GetComponent<Rigidbody2D>()
+                .AddForce(
+                    (target.transform.position - transform.position) * BulletSpeed * Time.deltaTime
+                );
+            Instantiate(bullet, olusumNoktasi2.transform.position, Quaternion.identity);
 
             nextFire = Time.time + fireRate;
             bullet

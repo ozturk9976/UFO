@@ -39,9 +39,9 @@ public class FireBall : MonoBehaviour
             dropFireBallLeft();
             source.Play();
 
-            if (ScoreCount.scoreValue == 45)
+            if (ScoreCount.scoreValue == 15)
             {
-                fireRate = 0.1f;
+                ammoCount += 15;
             }
         }
     }
@@ -73,21 +73,6 @@ public class FireBall : MonoBehaviour
             Mermi3
                 .GetComponent<Rigidbody2D>()
                 .AddForce(-transform.right * LaunchForce * Time.deltaTime);
-        }
-    }
-
-    public void shotgun()
-    {
-        for (int i = 0; i < 1; i++)
-        {
-            GameObject Mermi2 = Instantiate(
-                Mermi1,
-                olusumNoktasi.transform.position,
-                transform.rotation
-            );
-            Mermi2
-                .GetComponent<Rigidbody2D>()
-                .AddForce(transform.right * LaunchForce * Time.deltaTime);
         }
     }
 }

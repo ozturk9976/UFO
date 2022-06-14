@@ -19,15 +19,15 @@ public class SpawnerUfo : MonoBehaviour
         //if (UITimer.TimerText.text.minutes == "35") { }
         if (ScoreCount.scoreValue == 15)
         {
-            time = 7f;
+            time = 6f;
         }
         if (ScoreCount.scoreValue == 55)
         {
-            time = 6.7f;
+            time = 5.7f;
         }
         if (ScoreCount.scoreValue == 85)
         {
-            time = 5f;
+            time = 5.25f;
         }
 
         if (ScoreCount.scoreValue == 125)

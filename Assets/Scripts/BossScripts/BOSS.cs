@@ -9,12 +9,10 @@ public class BOSS : MonoBehaviour
     private Rigidbody2D rb;
     private bool facingRight = false;
     private Vector3 localScale;
-    public bool bossisSpawned;
 
     // Start is called before the first frame update
     void Start()
     {
-        bossisSpawned = true;
         localScale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         dirX = -1f;

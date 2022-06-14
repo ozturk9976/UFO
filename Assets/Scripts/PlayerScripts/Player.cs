@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     public int currentHealth;
     public GameObject shield;
     public Transform PlayerSprite;
+    Coroutine bekle;
+    IEnumerator BekleieNumerator;
+    public AudioSource shieldaudio;
 
     Vector2 hareket;
 
@@ -22,10 +25,12 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        bekle = StartCoroutine(beklecoroutine());
         currentHealth = PlayerHealth;
         ScoreCount.scoreValue = 0;
         rb = GetComponent<Rigidbody2D>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        shieldaudio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -39,14 +44,6 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + hareket * hareketGucu * Time.fixedDeltaTime);
     }
 
-    void Die()
-    {
-        if (currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
     // void isThereAShield()
     // {
     //     currentHealth += 20;
@@ -55,17 +52,26 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag.Equals("ShieldIcon"))
+        // if (col.gameObject.tag.Equals("Shield"))
+        // {
+        //     Instantiate(shield, transform.position, Quaternion.identity);
+        //     beklecoroutine();
+        //     Destroy(shield);
+        // }
+        if (col.gameObject.tag.Equals("Shield"))
         {
-            // Instantiate(shield, PlayerSprite);
+            Instantiate(shield, PlayerSprite);
+            Destroy(col.gameObject);
+            Destroy(shield, 15f);
+            shieldaudio.Play();
             // Instantiate(shield, transform.position, Quaternion.identity);
         }
         if (col.gameObject.tag.Equals("EnemyBullet"))
         {
             // isThereAShield();
             currentHealth -= 20;
-
-            SceneManager.LoadScene("GameOverScene");
+            Debug.Log("nabers");
+            Die();
         }
         if (col.gameObject.tag.Equals("Enemy"))
         {
@@ -74,9 +80,18 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene("GameOverScene");
         }
+    }
+
+    void Die()
+    {
         if (currentHealth == 0)
         {
-            Die();
+            Destroy(gameObject);
         }
+    }
+
+    IEnumerator beklecoroutine()
+    {
+        yield return new WaitForSeconds(15f);
     }
 }

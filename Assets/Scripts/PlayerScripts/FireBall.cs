@@ -9,6 +9,7 @@ public class FireBall : MonoBehaviour
     public float fireRate = 0.7F;
     private float nextFire = 0.0F;
     public GameObject Mermi1;
+    public int ammoCount = 1;
 
     public Transform olusumNoktasi;
     public Transform olusumNoktasi2;
@@ -47,7 +48,7 @@ public class FireBall : MonoBehaviour
 
     public void dropFireBallRight()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < ammoCount; i++)
         {
             GameObject Mermi2 = Instantiate(
                 Mermi1,
@@ -62,7 +63,7 @@ public class FireBall : MonoBehaviour
 
     public void dropFireBallLeft()
     {
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < ammoCount; i++)
         {
             GameObject Mermi3 = Instantiate(
                 Mermi1,
@@ -77,7 +78,7 @@ public class FireBall : MonoBehaviour
 
     public void shotgun()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 1; i++)
         {
             GameObject Mermi2 = Instantiate(
                 Mermi1,

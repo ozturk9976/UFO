@@ -19,11 +19,11 @@ public class Spawner : MonoBehaviour
         {
             time = 1.1f;
         }
-        if (ScoreCount.scoreValue == 25)
+        if (ScoreCount.scoreValue == 35)
         {
             time = 1f;
         }
-        if (ScoreCount.scoreValue == 45)
+        if (ScoreCount.scoreValue == 55)
         {
             time = 0.9f;
         }
@@ -31,29 +31,45 @@ public class Spawner : MonoBehaviour
         {
             time = 0.8f;
         }
-        if (ScoreCount.scoreValue == 105)
+        if (ScoreCount.scoreValue == 115)
         {
             time = 0.7f;
         }
-        if (ScoreCount.scoreValue == 125)
-        {
-            time = 0.65f;
-        }
         if (ScoreCount.scoreValue == 135)
         {
-            time = 0.6f;
+            time = 0.62f;
         }
         if (ScoreCount.scoreValue == 155)
         {
-            time = 0.5f;
+            time = 0.59f;
         }
         if (ScoreCount.scoreValue == 175)
         {
-            time = 0.4f;
+            time = 0.5f;
         }
         if (ScoreCount.scoreValue == 200)
         {
+            time = 0.4f;
+        }
+        if (ScoreCount.scoreValue == 225)
+        {
             time = 0.3f;
+        }
+        if (ScoreCount.scoreValue == 250)
+        {
+            time = 0.27f;
+        }
+        if (ScoreCount.scoreValue == 275)
+        {
+            time = 0.23f;
+        }
+        if (ScoreCount.scoreValue == 300)
+        {
+            time = 0.21f;
+        }
+        if (ScoreCount.scoreValue == 350)
+        {
+            time = 0.18f;
         }
     }
 

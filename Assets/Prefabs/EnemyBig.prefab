@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3047829073202188591}
   - component: {fileID: 6661811994571306175}
   - component: {fileID: 1443215631540304821}
+  - component: {fileID: 5054474021822303773}
   m_Layer: 0
   m_Name: EnemyBig
   m_TagString: Enemy
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7a2bd6d8ac1299d4880a54d74382e90b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  moveSpeed: 1
+  moveSpeed: 1.2
 --- !u!114 &6661811994571306175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +189,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 12
+--- !u!114 &5054474021822303773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020604886630553622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f98e05b665cfd4c990858270d23cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealthMax: 100
+  enemycurrentHealth: 0

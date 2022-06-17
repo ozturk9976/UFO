@@ -31,12 +31,16 @@ public class Destroy : MonoBehaviour
         if (col.gameObject.tag.Equals("Bullet"))
         {
             shake.CamShake();
-            Destroy(gameObject);
-            Destroy(col.gameObject);
             Instantiate(floatingScore, transform.position, Quaternion.identity);
             Instantiate(particleExplosion, transform.position, Quaternion.identity);
             Instantiate(explosion, transform.position, Quaternion.identity);
-            ScoreCount.scoreValue += 1;
+            Kill();
         }
+    }
+
+    void Kill()
+    {
+        Destroy(gameObject);
+        ScoreCount.scoreValue += 1;
     }
 }

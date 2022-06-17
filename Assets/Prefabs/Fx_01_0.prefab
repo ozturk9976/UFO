@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 3746084628280158832}
   - component: {fileID: 1095588310595557339}
   - component: {fileID: 9061341068355036753}
-  - component: {fileID: 9198244163047758097}
   - component: {fileID: 7136718717639798834}
   - component: {fileID: -105661444305887318}
   - component: {fileID: 8107008012306537636}
   - component: {fileID: 1324544262741716961}
   - component: {fileID: 4530103570701583124}
+  - component: {fileID: -7490092522239707502}
   m_Layer: 0
   m_Name: Fx_01_0
   m_TagString: Bullet
@@ -112,19 +112,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &9198244163047758097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2468056784435604811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ec50c93653e9545b2e1d06c589971e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyTime: 3
 --- !u!95 &7136718717639798834
 Animator:
   serializedVersion: 4
@@ -157,13 +144,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1ce93889c43282543b84bb098abef1c9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.168
+  m_Volume: 0.128
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 167
+  Priority: 178
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 10
@@ -283,7 +270,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.08
+  m_Time: 0.05
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -291,8 +278,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.02607727
-        value: 0.106557846
+        time: 0.03313446
+        value: 0.08760643
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -300,8 +287,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.43485916
-        value: 0.11742422
+        time: 0.52128494
+        value: 0.06357595
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -309,8 +296,8 @@ TrailRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.66373235
-        value: 0
+        time: 0.91943914
+        value: 0.041656494
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -322,24 +309,24 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0.9872489, a: 1}
-      key1: {r: 1, g: 0, b: 0.9872489, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 0.3551203, g: 1, b: 0, a: 1}
+      key2: {r: 0, g: 0.7525759, b: 1, a: 0}
+      key3: {r: 1, g: 1, b: 1, a: 0}
+      key4: {r: 1, g: 0, b: 0.11541796, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
+      ctime1: 7517
+      ctime2: 25058
+      ctime3: 39899
+      ctime4: 59367
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 0
-      atime1: 65535
+      atime0: 53970
+      atime1: 61102
       atime2: 0
       atime3: 0
       atime4: 0
@@ -347,7 +334,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 5
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
@@ -403,3 +390,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.005632785}
   serializedVersion: 2
   m_Radius: 0.030580893
+--- !u!114 &-7490092522239707502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468056784435604811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59cbcca7bd1420240a1ef0e3df631006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -485,6 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 0.7
   Mermi1: {fileID: 3052043061934572021, guid: ed5e05c9a28aea944b2865918003cc7b, type: 3}
+  ammoCount: 1
   olusumNoktasi: {fileID: 5559454869961003077}
   olusumNoktasi2: {fileID: 0}
   LaunchForce: 20

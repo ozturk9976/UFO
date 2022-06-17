@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        bekle = StartCoroutine(beklecoroutine());
         currentHealth = PlayerHealth;
         ScoreCount.scoreValue = 0;
         rb = GetComponent<Rigidbody2D>();
@@ -52,25 +51,10 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        // if (col.gameObject.tag.Equals("Shield"))
-        // {
-        //     Instantiate(shield, transform.position, Quaternion.identity);
-        //     beklecoroutine();
-        //     Destroy(shield);
-        // }
-        if (col.gameObject.tag.Equals("Shield"))
-        {
-            Instantiate(shield, PlayerSprite);
-            Destroy(col.gameObject);
-            Destroy(shield, 15f);
-            shieldaudio.Play();
-            // Instantiate(shield, transform.position, Quaternion.identity);
-        }
         if (col.gameObject.tag.Equals("EnemyBullet"))
         {
             // isThereAShield();
             currentHealth -= 20;
-            Debug.Log("nabers");
             Die();
         }
         if (col.gameObject.tag.Equals("Enemy"))
@@ -87,11 +71,14 @@ public class Player : MonoBehaviour
         if (currentHealth == 0)
         {
             Destroy(gameObject);
+            StartCoroutine(Text());
         }
     }
 
-    IEnumerator beklecoroutine()
+    IEnumerator Text() //  <-  its a standalone method
     {
-        yield return new WaitForSeconds(15f);
+        Debug.Log("Hell12o");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("GameOverScene");
     }
 }

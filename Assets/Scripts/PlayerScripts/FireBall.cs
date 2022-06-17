@@ -27,7 +27,7 @@ public class FireBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E) && Time.time > nextFire) //GETKEY İLE YAPILINCA BİRSÜRÜ MERMİ SPAWNLAN
+        if (Input.GetKey(KeyCode.E) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             dropFireBallRight();
@@ -38,11 +38,6 @@ public class FireBall : MonoBehaviour
             nextFire = Time.time + fireRate;
             dropFireBallLeft();
             source.Play();
-
-            if (ScoreCount.scoreValue == 15)
-            {
-                ammoCount += 15;
-            }
         }
     }
 

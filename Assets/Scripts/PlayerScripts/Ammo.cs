@@ -5,8 +5,19 @@ using UnityEngine;
 public class Ammo : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start() { }
+    void Start()
+    {
+        Destroy(gameObject, 0.75f);
+    }
 
     // Update is called once per frame
     void Update() { }
+
+    void OnCollisionEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("Border"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

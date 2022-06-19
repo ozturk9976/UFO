@@ -16,8 +16,6 @@ public class Player : MonoBehaviour
     public GameObject shield;
     public Transform PlayerSprite;
     Coroutine bekle;
-    IEnumerator BekleieNumerator;
-    public AudioSource shieldaudio;
 
     Vector2 hareket;
 
@@ -29,7 +27,6 @@ public class Player : MonoBehaviour
         ScoreCount.scoreValue = 0;
         rb = GetComponent<Rigidbody2D>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
-        shieldaudio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -54,10 +51,10 @@ public class Player : MonoBehaviour
         if (col.gameObject.tag.Equals("EnemyBullet"))
         {
             // isThereAShield();
-            currentHealth -= 20;
+            currentHealth -= 10;
             Die();
         }
-        if (col.gameObject.tag.Equals("Enemy"))
+        if (col.gameObject.tag.Equals("Enemy") || (col.gameObject.tag.Equals("Border")))
         {
             shake.CamShake();
             Instantiate(explosion, transform.position, Quaternion.identity);
@@ -71,14 +68,6 @@ public class Player : MonoBehaviour
         if (currentHealth == 0)
         {
             Destroy(gameObject);
-            StartCoroutine(Text());
         }
-    }
-
-    IEnumerator Text() //  <-  its a standalone method
-    {
-        Debug.Log("Hell12o");
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("GameOverScene");
     }
 }

@@ -15,7 +15,11 @@ public class Ammo : MonoBehaviour
 
     void OnCollisionEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("Border"))
+        if (
+            col.gameObject.tag.Equals("Enemy")
+            || col.gameObject.tag.Equals("Border")
+            || col.gameObject.tag.Equals("BossTag")
+        )
         {
             Destroy(gameObject);
         }

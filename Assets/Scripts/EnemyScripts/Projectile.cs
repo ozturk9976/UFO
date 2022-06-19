@@ -34,10 +34,6 @@ public class Projectile : MonoBehaviour
             Instantiate(projectileDestroyParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        if (col.gameObject.tag.Equals("Shield"))
-        {
-            Destroy(col.gameObject);
-        }
     }
 
     // Update is called once per frame

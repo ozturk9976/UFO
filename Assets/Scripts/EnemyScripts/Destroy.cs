@@ -19,8 +19,6 @@ public class Destroy : MonoBehaviour
     {
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
         rb = GetComponent<Rigidbody2D>();
-
-        // Destroy(gameObject, 5f);
     }
 
     // Update is called once per frame

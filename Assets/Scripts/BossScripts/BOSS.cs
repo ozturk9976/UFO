@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BOSS : MonoBehaviour
 {
+    public int bossHealth;
+    private int currentBossHealth = 100;
     private float dirX;
     private float moveSpeed;
     private Rigidbody2D rb;
@@ -13,19 +15,22 @@ public class BOSS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bossHealth = currentBossHealth;
         localScale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
         dirX = -1f;
-        moveSpeed = 2f;
+        moveSpeed = 3f;
     }
 
-    private void OnCollisionEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.GetComponent<Wall>())
+        if (col.gameObject.tag.Equals("Wall"))
         {
             dirX *= -1;
         }
     }
+
+    private void OnCollisionEnter2D(Collider2D collider) { }
 
     void FixedUpdate()
     {
@@ -51,4 +56,12 @@ public class BOSS : MonoBehaviour
 
     // Update is called once per frame
     void Update() { }
+
+    void die()
+    {
+        if (currentBossHealth == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

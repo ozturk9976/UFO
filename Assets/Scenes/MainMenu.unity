@@ -397,7 +397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -91, y: 100}
   m_SizeDelta: {x: 350, y: 97.2801}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &199627443
@@ -622,7 +622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -218, y: -186}
+  m_AnchoredPosition: {x: -213, y: -121.73}
   m_SizeDelta: {x: 250, y: 63.1146}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &867171148
@@ -849,8 +849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -308, y: -17}
-  m_SizeDelta: {x: 210, y: 63.1146}
+  m_AnchoredPosition: {x: -6, y: -124}
+  m_SizeDelta: {x: 172.4262, y: 58.5798}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1639100744
 MonoBehaviour:
@@ -1094,7 +1094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000019073, y: 0}
+  m_AnchoredPosition: {x: -180, y: 0}
   m_SizeDelta: {x: 421.6899, y: 187.901}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1912434139
@@ -1130,7 +1130,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WELCOME TO THE COOLEST GAME ON THE MILKY WAY :)
+  m_Text: 'WELCOME TO THE POCKET UFO '
 --- !u!222 &1912434140
 CanvasRenderer:
   m_ObjectHideFlags: 0

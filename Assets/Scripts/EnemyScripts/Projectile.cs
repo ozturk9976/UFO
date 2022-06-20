@@ -11,7 +11,6 @@ public class Projectile : MonoBehaviour
 
     public GameObject projectileDestroyParticle;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -36,12 +35,11 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(
             transform.position,
-            player.position, //player.position dersen takip eder // target dersen normal
+            player.position, //player.position denilirse takip eder // target dersen normal
             speed * Time.deltaTime
         );
     }

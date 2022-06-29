@@ -17,12 +17,15 @@ public class Player : MonoBehaviour
     public Transform PlayerSprite;
     Coroutine bekle;
 
+    private bool isDead;
+
     Vector2 hareket;
 
     Rigidbody2D rb;
 
     void Start()
     {
+        
         currentHealth = PlayerHealth;
         ScoreCount.scoreValue = 0;
         rb = GetComponent<Rigidbody2D>();
@@ -40,19 +43,15 @@ public class Player : MonoBehaviour
         rb.MovePosition(rb.position + hareket * hareketGucu * Time.fixedDeltaTime);
     }
 
-    // void isThereAShield()
-    // {
-    //     currentHealth += 20;
-    //     Destroy(shield);
-    // }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag.Equals("EnemyBullet"))
         {
-            // isThereAShield();
-            currentHealth -= 10;
+            Destroy(col.gameObject);
+            currentHealth -= 20;
             Die();
+            
         }
         if (col.gameObject.tag.Equals("Enemy") || (col.gameObject.tag.Equals("Border")))
         {
@@ -62,12 +61,27 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("GameOverScene");
         }
     }
+    void sceneChange()
+    {
+        if (isDead == true)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
 
     void Die()
     {
         if (currentHealth == 0)
         {
+            isDead = true;                  
             Destroy(gameObject);
+            StartCoroutine(ExampleCoroutine());
+            SceneManager.LoadScene("GameOverScene");
         }
     }
+    IEnumerator ExampleCoroutine()
+    {          
+        yield return new WaitForSeconds(3);       
+    }
 }
+

@@ -109,7 +109,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &7136718717639798834
 Animator:
@@ -269,7 +269,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.001
+  m_Time: 0.0001
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1

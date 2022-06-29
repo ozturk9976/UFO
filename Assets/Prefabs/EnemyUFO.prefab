@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e885ac0621d3f4982fea3d10a4bd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 470251545549795801, guid: bf97bd2d50106324fb717b1194ef53ff, type: 3}
+  projectile: {fileID: 1877740161113332, guid: d17799e01588538449a360ded5bd038c, type: 3}
   startTimeBtwShots: 2.4
 --- !u!61 &-6396468219231873186
 BoxCollider2D:
